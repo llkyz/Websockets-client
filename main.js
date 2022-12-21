@@ -3,7 +3,7 @@ import { createBoard, playMove } from "./connect4.js";
 window.addEventListener("DOMContentLoaded", () => {
   const board = document.querySelector(".board");
   createBoard(board);
-  const websocket = new WebSocket("ws://websockets-zyf3jml75q-uc.a.run.app");
+  const websocket = new WebSocket("wss://websockets-zyf3jml75q-uc.a.run.app");
   initGame(websocket);
   receiveMoves(board, websocket);
   sendMoves(board, websocket);
